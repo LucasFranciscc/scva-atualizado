@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="78974af5-ffd0-4f7a-aba3-1fc5b5be119c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/res/js/jquery.validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/admin-group.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/admin-group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/admin-region.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/admin-region.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/admin-users.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/admin-users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/admin-valve.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/admin-valve.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/tecnico/tecnico.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/tecnico/tecnico.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listEvents.php" beforeDir="false" afterPath="$PROJECT_DIR$/listEvents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/scva/php-classes/src/DB/Sql.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/scva/php-classes/src/DB/Sql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/scva/php-classes/src/Model/Called.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/scva/php-classes/src/Model/Called.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/scva/php-classes/src/Model/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/scva/php-classes/src/Model/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/scva/php-classes/src/Model/Group.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/scva/php-classes/src/Model/Group.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/scva/php-classes/src/Model/Region.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/scva/php-classes/src/Model/Region.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/scva/php-classes/src/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/scva/php-classes/src/Model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/scva/php-classes/src/Model/Valve.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/scva/php-classes/src/Model/Valve.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/event-update.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/event-update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/event.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/group-create.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/group-create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/group-update.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/group-update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/group.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/group.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/region-create.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/region-create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/region-update.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/region-update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/region.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/region.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/user-create.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/user-create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/user-password-update.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/user-password-update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/user-update.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/user-update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/valve-create.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/valve-create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/valve-update.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/valve-update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/valve.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/valve.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/operador/called-preview-status.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/operador/called-preview-status.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/operador/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/operador/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/operador/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/operador/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/operador/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/operador/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/tecnico/called-create.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/tecnico/called-create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/tecnico/called-update.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/tecnico/called-update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/tecnico/called.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/tecnico/called.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/tecnico/event.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/tecnico/event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/tecnico/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/tecnico/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/tecnico/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/tecnico/header.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="scva.com.br" id="b94b045a-dffb-4065-b562-b2586f21d99a" name="scva.com.br" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/rain/raintpl" />
+      <path value="$PROJECT_DIR$/vendor/scva/php-classes" />
+      <path value="$PROJECT_DIR$/vendor/slim/slim" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1XyK6awrrr2xlQHNCOHFD86OALZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="78974af5-ffd0-4f7a-aba3-1fc5b5be119c" name="Default Changelist" comment="" />
+      <created>1582012719878</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582012719878</updated>
+      <workItem from="1582012721206" duration="16098000" />
+      <workItem from="1582067354254" duration="619000" />
+      <workItem from="1582196999190" duration="2431000" />
+      <workItem from="1582237843377" duration="37000" />
+      <workItem from="1602654685620" duration="4015000" />
+      <workItem from="1602830442827" duration="115000" />
+      <workItem from="1603313133707" duration="3478000" />
+      <workItem from="1603369800428" duration="5711000" />
+      <workItem from="1603487524313" duration="6551000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="382" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602657371111">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state x="382" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1304.768@0.0.1304.768" timestamp="1602657371111" />
+    <state width="404" height="466" key="DebuggerActiveHint" timestamp="1603515267585">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="404" height="466" key="DebuggerActiveHint/0.0.1304.768@0.0.1304.768" timestamp="1603515267585" />
+    <state width="477" height="547" key="DebuggerActiveHint/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603372611528" />
+    <state x="510" y="163" key="FileChooserDialogImpl" timestamp="1603372436429">
+      <screen x="0" y="0" width="1538" height="900" />
+    </state>
+    <state x="432" y="139" key="FileChooserDialogImpl/0.0.1304.768@0.0.1304.768" timestamp="1602830561250" />
+    <state x="510" y="163" key="FileChooserDialogImpl/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603372436429" />
+    <state width="1261" height="238" key="GridCell.Tab.0.bottom" timestamp="1603515361066">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="238" key="GridCell.Tab.0.bottom/0.0.1304.768@0.0.1304.768" timestamp="1603515361066" />
+    <state width="1495" height="291" key="GridCell.Tab.0.bottom/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603380542784" />
+    <state width="1261" height="238" key="GridCell.Tab.0.center" timestamp="1603515361066">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="238" key="GridCell.Tab.0.center/0.0.1304.768@0.0.1304.768" timestamp="1603515361066" />
+    <state width="1495" height="291" key="GridCell.Tab.0.center/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603380542784" />
+    <state width="1261" height="238" key="GridCell.Tab.0.left" timestamp="1603515361066">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="238" key="GridCell.Tab.0.left/0.0.1304.768@0.0.1304.768" timestamp="1603515361066" />
+    <state width="1495" height="291" key="GridCell.Tab.0.left/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603380542784" />
+    <state width="1261" height="238" key="GridCell.Tab.0.right" timestamp="1603515361066">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="238" key="GridCell.Tab.0.right/0.0.1304.768@0.0.1304.768" timestamp="1603515361066" />
+    <state width="1495" height="291" key="GridCell.Tab.0.right/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603380542784" />
+    <state width="1261" height="238" key="GridCell.Tab.1.bottom" timestamp="1603515361066">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="238" key="GridCell.Tab.1.bottom/0.0.1304.768@0.0.1304.768" timestamp="1603515361066" />
+    <state width="1495" height="291" key="GridCell.Tab.1.bottom/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603380542784" />
+    <state width="1261" height="238" key="GridCell.Tab.1.center" timestamp="1603515361066">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="238" key="GridCell.Tab.1.center/0.0.1304.768@0.0.1304.768" timestamp="1603515361066" />
+    <state width="1495" height="291" key="GridCell.Tab.1.center/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603380542784" />
+    <state width="1261" height="238" key="GridCell.Tab.1.left" timestamp="1603515361066">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="238" key="GridCell.Tab.1.left/0.0.1304.768@0.0.1304.768" timestamp="1603515361066" />
+    <state width="1495" height="291" key="GridCell.Tab.1.left/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603380542784" />
+    <state width="1261" height="238" key="GridCell.Tab.1.right" timestamp="1603515361066">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="238" key="GridCell.Tab.1.right/0.0.1304.768@0.0.1304.768" timestamp="1603515361066" />
+    <state width="1495" height="291" key="GridCell.Tab.1.right/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603380542784" />
+    <state width="1261" height="238" key="GridCell.Tab.2.bottom" timestamp="1603515361066">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="238" key="GridCell.Tab.2.bottom/0.0.1304.768@0.0.1304.768" timestamp="1603515361066" />
+    <state width="1495" height="291" key="GridCell.Tab.2.bottom/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603380542784" />
+    <state width="1261" height="238" key="GridCell.Tab.2.center" timestamp="1603515361066">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="238" key="GridCell.Tab.2.center/0.0.1304.768@0.0.1304.768" timestamp="1603515361066" />
+    <state width="1495" height="291" key="GridCell.Tab.2.center/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603380542784" />
+    <state width="1261" height="238" key="GridCell.Tab.2.left" timestamp="1603515361066">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="238" key="GridCell.Tab.2.left/0.0.1304.768@0.0.1304.768" timestamp="1603515361066" />
+    <state width="1495" height="291" key="GridCell.Tab.2.left/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603380542784" />
+    <state width="1261" height="238" key="GridCell.Tab.2.right" timestamp="1603515361066">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1261" height="238" key="GridCell.Tab.2.right/0.0.1304.768@0.0.1304.768" timestamp="1603515361066" />
+    <state width="1495" height="291" key="GridCell.Tab.2.right/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603380542784" />
+    <state x="465" y="182" width="607" height="536" key="find.popup" timestamp="1603370072430">
+      <screen x="0" y="0" width="1538" height="900" />
+    </state>
+    <state x="465" y="182" width="607" height="536" key="find.popup/0.0.1538.900/134.900.1304.768@0.0.1538.900" timestamp="1603370072430" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/controller/tecnico/tecnico.php</url>
+          <line>34</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/controller/admin/admin-users.php</url>
+          <line>37</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/vendor/scva/php-classes/src/Model/User.php</url>
+          <line>115</line>
+          <properties>
+            <option name="className" value="\SCVA\Model\User" />
+            <option name="methodName" value="create" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/vendor/scva/php-classes/src/Model/Event.php</url>
+          <line>35</line>
+          <properties>
+            <option name="className" value="\SCVA\Model\Event" />
+            <option name="methodName" value="create" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/vendor/scva/php-classes/src/Model/Called.php</url>
+          <line>94</line>
+          <properties>
+            <option name="className" value="\SCVA\Model\Called" />
+            <option name="methodName" value="updateStatus" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

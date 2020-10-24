@@ -1,0 +1,40 @@
+1º acessar a pasta no caminho (C:\xampp\htdocs) e colar o projeto nesta pasta.
+
+2º criar base de dados com o nome (scva).
+
+3º importar arquivo sql que está na pasta sql na raiz do projeto, para a base de dados scva.
+
+4º instalar o notepad ++.
+
+5º acessar a pasta no caminho ( C:\xampp\apache\conf\extra ) e abrir o arquivo no notepad ++ ( httpd-vhosts.conf ) e no
+final colar o seguinte script.
+
+<VirtualHost *:80>
+	ServerAdmin webmaster@scva.com.br
+	DocumentRoot "C:/xampp/htdocs/SCVA"
+	ServerName scva.com.br
+	ErrorLog "logs/dummy-host2.example.com-error.log"
+	CustomLog "logs/dummy-host2.example.com-access.log" common
+	<Directory "C:/xampp/htdocs/SCVA">
+		Require all granted
+
+		RewriteEngine On
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteRule ^ index.php [QSA,L]
+	</Directory>
+</VirtualHost>
+
+6º acessar a pasta no caminho ( C:\Windows\System32\drivers\etc ) e abrir o arquivo no notepad ++ (hosts) e no
+final colar o seguinte script.
+
+127.0.0.1			scva.com.br
+
+7º reiniciar o apache e o mysql no xampp.
+
+8º acessar no navegado a url scva.com.br.
+
+9º usuários de acesso:
+Administrativo - usuario: ADM001, senha: administrador
+Tecnico - usuario: TEC001 senha: tecnico
+Operador - usuario: OPR001 senha: operador
