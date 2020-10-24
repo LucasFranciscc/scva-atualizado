@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="78974af5-ffd0-4f7a-aba3-1fc5b5be119c" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/res/js/jquery.validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/scva.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/scva.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/admin/admin-group.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/admin-group.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/admin/admin-region.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/admin-region.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/admin/admin-users.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/admin-users.php" afterDir="false" />
@@ -128,7 +130,7 @@
       <workItem from="1602830442827" duration="115000" />
       <workItem from="1603313133707" duration="3478000" />
       <workItem from="1603369800428" duration="5711000" />
-      <workItem from="1603487524313" duration="6551000" />
+      <workItem from="1603487524313" duration="6820000" />
     </task>
     <servers />
   </component>

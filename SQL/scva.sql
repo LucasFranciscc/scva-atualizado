@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11-Fev-2020 às 01:11
+-- Tempo de geração: 24-Out-2020 às 02:15
 -- Versão do servidor: 10.4.11-MariaDB
--- versão do PHP: 7.4.1
+-- versão do PHP: 7.3.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `scva`
+-- Banco de dados: `scva2`
 --
 
 DELIMITER $$
@@ -149,12 +148,12 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `P015_REMOVE_REGION` (IN `pfk_group`
     
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `P016_EVENTS_CREATE` (IN `ptitle` VARCHAR(50), IN `pfk_group` INT, IN `pcolor` VARCHAR(10), IN `pstart` VARCHAR(20))  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `P016_EVENTS_CREATE` (IN `ptitle` VARCHAR(50), IN `pfk_group` INT, IN `pcolor` VARCHAR(10), IN `pstart` VARCHAR(20), IN `pend` VARCHAR(20))  BEGIN
 	
     DECLARE Vid_events INT;
     
-    INSERT INTO events (title, fk_group, color, start)
-    VALUES (ptitle, pfk_group, pcolor, pstart);
+    INSERT INTO events (title, fk_group, color, start, end)
+    VALUES (ptitle, pfk_group, pcolor, pstart, pend);
     
     SET Vid_events = LAST_INSERT_ID();
     
@@ -168,13 +167,14 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `P017_EVENTS_START_UPDATE` (IN `pid_
         
 end$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `P018_EVENTS_UPDATE` (IN `pid_events` INT, IN `ptitle` VARCHAR(50), IN `pfk_group` INT, IN `pcolor` VARCHAR(10), IN `pstart` VARCHAR(20))  begin
+CREATE DEFINER=`root`@`localhost` PROCEDURE `P018_EVENTS_UPDATE` (IN `pid_events` INT, IN `ptitle` VARCHAR(50), IN `pfk_group` INT, IN `pcolor` VARCHAR(10), IN `pstart` VARCHAR(20), IN `pend` VARCHAR(20))  begin
 		update events
 			set
 				title = ptitle,
                 fk_group = pfk_group,
                 color = pcolor,
-                start = pstart
+                start = pstart,
+                end = pend
 			where id_events = pid_events;
             
 end$$
@@ -227,6 +227,26 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `answers`
+--
+
+CREATE TABLE `answers` (
+  `id_answer` int(11) NOT NULL,
+  `fk_called` int(11) NOT NULL,
+  `answer` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `answers`
+--
+
+INSERT INTO `answers` (`id_answer`, `fk_called`, `answer`, `created_at`) VALUES
+(1, 3, 'hgsdfafasdfa', '2020-10-22 13:56:22');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `called`
 --
 
@@ -241,6 +261,13 @@ CREATE TABLE `called` (
   `fk_status` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `called`
+--
+
+INSERT INTO `called` (`id_called`, `registration`, `name`, `update_date`, `registration_date`, `fk_group`, `description`, `fk_status`) VALUES
+(3, 'TEC001', 'Técnico teste', '2020-10-22 10:28:33', '2020-10-22 13:56:22', 9, 'hdfgsdgsd', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -253,9 +280,23 @@ CREATE TABLE `events` (
   `fk_group` int(11) NOT NULL,
   `color` varchar(10) NOT NULL,
   `start` varchar(20) NOT NULL,
+  `end` varchar(50) NOT NULL,
   `status` bit(1) NOT NULL DEFAULT b'1',
   `registration_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `events`
+--
+
+INSERT INTO `events` (`id_events`, `title`, `fk_group`, `color`, `start`, `end`, `status`, `registration_date`) VALUES
+(1, 'fsdggsd', 9, '#FFD700', '2020-09-29 00:00:00', '1969-12-31 21:00:00', b'0', '2020-10-22 13:02:18'),
+(2, 'fdgsdfdf', 9, '#0071c5', '2020-09-28 00:00:00', '1969-12-31 21:00:00', b'0', '2020-10-22 13:25:56'),
+(3, 'dghd', 9, '#FFD700', '2020-10-05 00:00:00', '', b'1', '2020-10-21 21:24:01'),
+(4, 'fgdsgf', 9, '#FF4500', '2020-10-20 00:00:00', '', b'1', '2020-10-21 21:24:22'),
+(5, 'hfsdf', 9, '#FFD700', '2020-10-22 00:00:00', '', b'1', '2020-10-21 21:24:49'),
+(6, 'Testeeee', 9, '#FFD700', '2020-10-16 23:00:00', '', b'1', '2020-10-21 21:29:51'),
+(8, 'RRRRR', 9, '#FFD700', '2020-10-03 22:00:00', '2020-10-05 13:00:00', b'1', '2020-10-22 12:45:19');
 
 -- --------------------------------------------------------
 
@@ -282,6 +323,13 @@ CREATE TABLE `grupos` (
   `registration_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `fk_valve` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `grupos`
+--
+
+INSERT INTO `grupos` (`id_group`, `_grupo`, `registration_date`, `fk_valve`) VALUES
+(9, 'A', '2020-10-21 21:12:12', 7);
 
 -- --------------------------------------------------------
 
@@ -315,6 +363,15 @@ CREATE TABLE `regions` (
   `region` varchar(50) NOT NULL,
   `registration_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `regions`
+--
+
+INSERT INTO `regions` (`id_region`, `region`, `registration_date`) VALUES
+(10, 'DF', '2020-10-21 20:49:12'),
+(11, 'DF', '2020-10-21 20:54:29'),
+(12, 'DF', '2020-10-21 20:54:54');
 
 -- --------------------------------------------------------
 
@@ -358,9 +415,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `registration`, `name`, `telephone`, `email`, `password`, `registration_date`, `fk_level_access`) VALUES
-(1, 'ADM001', 'Administrador Teste', '(00) 00000-0000', 'administrador@gmail.com', '$2y$12$F6fOcJOlh5GZbHSD3JrKJuNLKP7Y1kOE9zu3vJOZOwc5Hs.Nq47Me', '2020-02-06 14:52:42', 1),
-(3, 'TEC001', 'Técnico teste', '(99) 99999-9999', 'tecnico@gmail.com', '$2y$12$5oIFD8Jo3yNZ6vxrZBQa8.qn1KhQSkYLj9I8BZdODmhv96qidQBfG', '2020-02-03 03:28:51', 2),
-(4, 'OPR001', 'Operador Teste', '(00) 00000-0000', 'operador@gmail.com', '$2y$12$PARulAhgv54DtmWw5iGLtOYHiUn.9SxEpUZFXAKn3bXTi7hAKyxSC', '2020-02-03 03:30:04', 3);
+(1, 'ADM001', 'Administrador Teste', '(00) 00000-0000', 'administrador@gmail.com', '$2y$10$p5hVVcztd.9uM/Gcq9AwBOp5VtLkm5dXVRVzOEiJpvcH2q/rVidKK', '2020-10-14 05:56:01', 1),
+(3, 'TEC001', 'Técnico teste', '(99) 99999-9999', 'tecnico@gmail.com', '$2y$10$p5hVVcztd.9uM/Gcq9AwBOp5VtLkm5dXVRVzOEiJpvcH2q/rVidKK', '2020-10-21 21:28:34', 2),
+(4, 'OPR001', 'Operador Teste', '(00) 00000-0000', 'operador@gmail.com', '$2y$10$p5hVVcztd.9uM/Gcq9AwBOp5VtLkm5dXVRVzOEiJpvcH2q/rVidKK', '2020-10-22 13:27:36', 3),
+(17, 'Admin123', 'Lucas Francisco', '(99) 99999-9999', 'lucasfrancisco1318@gmail.com', '$2y$12$JU8VLwOp0O/39p0yovFj7.aby46q87YxzOi9nQADMywMluA3QsTRu', '2020-10-24 05:00:46', 1);
 
 -- --------------------------------------------------------
 
@@ -375,8 +433,23 @@ CREATE TABLE `valves` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Extraindo dados da tabela `valves`
+--
+
+INSERT INTO `valves` (`id_valve`, `valve`, `registration_date`) VALUES
+(7, 'Teste', '2020-10-21 21:05:57'),
+(8, 'sadfdsafas', '2020-10-24 01:35:59');
+
+--
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `answers`
+--
+ALTER TABLE `answers`
+  ADD PRIMARY KEY (`id_answer`),
+  ADD KEY `fk_called` (`fk_called`);
 
 --
 -- Índices para tabela `called`
@@ -444,28 +517,34 @@ ALTER TABLE `valves`
 --
 
 --
+-- AUTO_INCREMENT de tabela `answers`
+--
+ALTER TABLE `answers`
+  MODIFY `id_answer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de tabela `called`
 --
 ALTER TABLE `called`
-  MODIFY `id_called` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_called` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `events`
 --
 ALTER TABLE `events`
-  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_events` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `group_region`
 --
 ALTER TABLE `group_region`
-  MODIFY `id_group_region` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_group_region` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `grupos`
 --
 ALTER TABLE `grupos`
-  MODIFY `id_group` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_group` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `level_access`
@@ -477,7 +556,7 @@ ALTER TABLE `level_access`
 -- AUTO_INCREMENT de tabela `regions`
 --
 ALTER TABLE `regions`
-  MODIFY `id_region` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_region` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `status`
@@ -489,17 +568,23 @@ ALTER TABLE `status`
 -- AUTO_INCREMENT de tabela `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de tabela `valves`
 --
 ALTER TABLE `valves`
-  MODIFY `id_valve` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_valve` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Restrições para despejos de tabelas
 --
+
+--
+-- Limitadores para a tabela `answers`
+--
+ALTER TABLE `answers`
+  ADD CONSTRAINT `answers_ibfk_1` FOREIGN KEY (`fk_called`) REFERENCES `called` (`id_called`);
 
 --
 -- Limitadores para a tabela `called`
